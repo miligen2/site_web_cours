@@ -40,18 +40,23 @@ body{
 
 
 #titre_menu{
-    margin-top: 60px;
-    margin-left: 20px;
+display: flex;
+margin-left: 25%;
+
+
 }
+
 
 .liste_pizza{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0px 150px;
+    margin: auto auto;
     width: 1250px;
 
 }
+
+
 
 .pizza{
     width: 300px;
@@ -90,6 +95,7 @@ margin-left: 10px;
 
 .footer-main{
     display: flex;
+    justify-content: center;
     align-items: flex-start;
 
 }
@@ -105,4 +111,7 @@ margin-left: 10px;
     height: 300px;
     flex-direction: column;
 
+}
+h6{
+    text-align: center;
 }
