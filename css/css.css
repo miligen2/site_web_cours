@@ -1,42 +1,105 @@
+ul{
+    list-style-type: none; 
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #eff5d3 ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.meun_nav{
+    display: flex ;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
 
 .nav_barre{
     background-color: hsl(70, 48%, 83%);
-    display: flex;
+
 }
 #logo{
-    display: flex;
-}
 
-ul{
-    display: flex;
-    list-style-type: none; 
 }
 
 
 .nav_barre li {
     font-weight: bold;
-    padding: 20px;
-}
-.nav_barre li a {
     padding: 20px 40px;
-
 }
+
 .nav_barre li a:hover {
+    color: #A7001E;
+}
+
+
+
+#titre_menu{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.liste_pizza{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px 150px;
+    width: 1250px;
 
 }
 
-a{
-    text-decoration: none;
+.pizza{
+    width: 300px;
+    height: auto;
+    margin: 10px 20px  ;
+    padding: 5px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.386);
+    border: solid black 1px;
+    background-color: rgba(255, 255, 255, 0.41);
+}
+.image_pizza {
+    display: flex;
+    justify-content: center;
+}
+#image_pizza{
+    width: 80%;
+}
+.titre_pizza h3{
+margin-left: 10px;
+}
+.description{
+    font-size: 12px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    height: 40.8px;
+}
+.prix_pizza{
+
+    text-align: center;
     
 }
 
-body{
-    background-color: #eff5d3 ;
 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+
+
+.footer-main{
+    display: flex;
 }
-
-
-.liste_pizza {
-
+.footer-titre{
+    text-align: center;
+    width: 200px;
+    height: 50px;
+}
+.colone{
+    display: flex;
+    justify-content : center;
+    margin-left :20px ;
+    width: 500px;
+    height: 300px;
+}
+.contenant{
+    display: block;
 }
