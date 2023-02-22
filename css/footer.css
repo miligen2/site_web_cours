@@ -1,0 +1,32 @@
+.footer-main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5%;
+
+}
+.footer-titre{
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+}
+.footer-contain{
+    display: flex;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+}
+.colone{
+    display: flex;
+    width: 500px;
+    height: 300px;
+    flex-direction: column;
+
+}
+h6{
+    text-align: center;
+}
+a:hover{
+    color: #A7001E ;
+}
