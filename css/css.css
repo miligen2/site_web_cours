@@ -13,18 +13,29 @@ margin-left: 25%;
 .liste_pizza{
     display: flex;
     justify-content: center;
+    gap: 2rem;
+    width: 70%;
+    flex-direction: column;
     flex-wrap: wrap;
     margin: auto auto;
-    width: 1250px;
+    align-items: center;
 
 }
+@media (min-width:1200px){
+    .liste_pizza {
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+  }
 
 
 
 .pizza{
-    width: 300px;
+    flex: 1 1 30%;
+    /* width: 300px;
     height: auto;
-    margin: 10px 20px  ;
+    margin: 10px 20px  ; */
     padding: 5px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.325);
     background-color: rgba(255, 255, 255, 0.11);
