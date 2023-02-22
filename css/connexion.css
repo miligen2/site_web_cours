@@ -1,29 +1,67 @@
-
-.connexion{
-    background: rgb(226,233,192);
-background: linear-gradient(90deg, rgba(226,233,192,1) 0%, rgba(0,221,255,0.43040966386554624) 100%);
-    display:flex;
-    justify-content:center;
-    width: 400px;
-    height: 400px;
-    margin: 200px auto auto;
-    
+body{
+    background: #000;
+}
+.connexion{    
+    display:grid;
+    place-items: center;
+    flex-direction: column;
+    width: 25vw;
+    border-radius: 10px;
+    height: 40vh;
+    margin: 20vh auto auto; 
+}
+.connexion_contenant{
+    display:grid;
+    place-items: center;
+    width: 25vw;
 }
 
-input[id="mail"]{ 
-    margin:2% 0 ;
-    padding: 12px 160px 7px 0;
-}
-input[id="password"]{
-    padding: 12px 160px 7px 0;
-}
-input[id="connexion"]{
-    cursor: pointer;
-    padding:  19px 120px 0 0 ;
-}
-.btn{
-    display: flex;
+
+input[id="mail"]  {
+    padding: 1vh 0.1vw;
+    background: #ffffff ;
+    margin: 1vh 0;
+    width: 12vw;
+    border: 2px solid #a7001e;
+    border-radius: 10px;
+    outline: none;
+
+  }
+  input[id="password"]  {
+    padding: 1vh 0.1vw;
+    background: #ffffff ;
+    margin: 1vh 0;
+    width: 12vw;
+    border: 2px solid #a7001e;
+    border-radius: 10px;
+    outline: none;
+
+  }
+  input[id="mail"]::placeholder{
+    color: #000
+
+  }
+  input[id="password"]::placeholder{
+    color: #000
+
+  }
+
+  button{
+    display: center;
     justify-content: center;
-    margin-top: 2%;
+    padding: 1vh 0.1vw;
+    width: 12vw;
+    margin: 1vh 0 ;
+    background: #ffffff;
+    border: 2px solid #a7001e;
+    border-radius: 10px; 
+    cursor: pointer;
+  }
+  button:hover{
+    border: 2px solid #e4dfc0;
+    background-color: #C1AA9E ;
 
-}
+  }
+
+
+

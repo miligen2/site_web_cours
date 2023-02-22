@@ -30,3 +30,8 @@ h6{
 a:hover{
     color: #A7001E ;
 }
+.copyrigth{
+    display:flex ;
+    margin-left: 8%;
+  
+}
