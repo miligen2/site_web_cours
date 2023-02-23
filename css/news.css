@@ -5,13 +5,14 @@ place-items: center;
 margin-top:3% ;
 }
 
+.image{
+    display: flex;
+    justify-content: center;
+}
 
 
 #moi{
-    display: flex;
-    justify-content: center;
-    align-items:center ;
-    margin: 4vh 32vw;
+
     border-radius: 25px;
 }
 

@@ -21,3 +21,4 @@ J'ai choisis un dégradé de couleur en fond de jaune à rouge ce qui rappel la 
  background: rgb(2,0,36);
  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(226,233,192,1) 0%, rgba(233,205,192,1) 100%);
 ```
+

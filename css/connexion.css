@@ -1,19 +1,37 @@
 body{
     background: #000;
 }
-.connexion{    
-    display:grid;
-    place-items: center;
-    flex-direction: column;
-    width: 25vw;
-    border-radius: 10px;
-    height: 40vh;
-    margin: 20vh auto auto; 
-}
 .connexion_contenant{
-    display:grid;
-    place-items: center;
-    width: 25vw;
+  width: 40vw;
+  border-radius: 10px;
+  height: 40vh;
+  margin: 20vh auto auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+.gauche {
+  display: flex;
+  flex-direction: column;
+  color: white; 
+}
+.titre{
+  text-align: end;
+}
+.description{
+  
+}
+.droite{
+  display:flex;
+  flex-direction: column;
+  place-items: center;
+  width: 25vw;
+}
+.gauche{
+  background-repeat: no-repeat;
+  background-size: 60vh 60vw;
+  background-image: url("../src/Pizza.png");
+  height: 50vh ;
 }
 
 

@@ -1,0 +1,41 @@
+.map{
+    justify-content: center;
+    display: flex;
+    float: right;
+    flex-direction: column;
+
+}
+.map2{
+    display: flex;
+    margin-left: 60vw;
+    margin-bottom: 25vh;
+
+
+}
+#la{
+    height: 60vh;
+    width: 70vw;
+}
+.tout{
+    margin-top: 7vh;
+    display:flex;
+
+}
+.gauche{
+    background-color: #fafafa;
+
+}
+.text{
+    margin-top: 5vh;
+}
+.titre{
+    margin: 2vh 5vw ;
+}
+.description{
+    margin-left: 5vw 
+
+}
+h3{
+    font-family: 'Tangerine', cursive;
+    font-size: 20pt;
+}
