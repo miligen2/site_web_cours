@@ -1,14 +1,16 @@
-.mid{
+.ctexte{
     display: flex;
     flex-direction: column;
     margin: 5vh 20vw;
 }
-.titre{
-    text-align: center;
-}
-h3 ,h4 {
-
+h3{
     font-family: 'Tangerine', cursive;
     font-size: 20pt;
 
-}a
+}
+.titre{
+    text-align: center;
+}
+.trait{
+    border: solid 1px ;
+}

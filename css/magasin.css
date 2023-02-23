@@ -5,6 +5,7 @@
     flex-direction: column;
 
 }
+
 .map2{
     display: flex;
     margin-left: 60vw;
@@ -29,7 +30,7 @@
     margin-top: 5vh;
 }
 .titre{
-    margin: 2vh 5vw ;
+    margin: 1vh 5vw ;
 }
 .description{
     margin-left: 5vw 

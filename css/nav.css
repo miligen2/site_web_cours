@@ -115,13 +115,11 @@ a {
 	position: fixed;
 	bottom: 10vh;
 	right: 6vw;
-	width: 60px;
-	height: 60px;
+	width: 3.75rem;
+	height: 3.75rem;
 	border-radius: 50%;
 	font-family: 'Shantell Sans', cursive;
 	font-size: 50pt;
 	background-color: rgb(238, 180, 74);
 	border: none;
-
-
 }

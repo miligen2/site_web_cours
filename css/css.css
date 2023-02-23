@@ -1,13 +1,18 @@
 
-
+.trait{
+    border: solid 1px black ;
+    margin: 0 25%
+}
 
 
 #titre_menu{
 display: flex;
-margin-left: 25%;
+justify-content: center;
+
 
 
 }
+
 
 
 .liste_pizza{
