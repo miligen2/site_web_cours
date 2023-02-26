@@ -12,6 +12,18 @@ justify-content: center;
 
 
 }
+.imgimp{
+    background-attachment: fixed;
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+    height: 50vh;
+    width: 100px;
+}
+#pizzah{
+    width: 100vw;
+height: 65vh
+;}
+
 
 
 
