@@ -13,7 +13,11 @@ body{
 .gauche {
   display: flex;
   flex-direction: column;
-  color: white; 
+  color: white;   
+  background-repeat: no-repeat;
+  background-size: 60vh 60vw;
+  background-image: url("../src/Pizza.png");
+  height: 50vh ;
 }
 .titre{
   text-align: end;
@@ -27,12 +31,7 @@ body{
   place-items: center;
   width: 25vw;
 }
-.gauche{
-  background-repeat: no-repeat;
-  background-size: 60vh 60vw;
-  background-image: url("../src/Pizza.png");
-  height: 50vh ;
-}
+
 
 
 input[id="mail"]  {
