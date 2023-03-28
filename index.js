@@ -1,10 +1,12 @@
 const express= require('express'); // importation de express avec la commande npm i express
 const ejs = require('ejs') ; // npm i ejs
+const bodyParser = require ('body-parser'); //must have ??????????????????
 
 const app = express();// creation du variable qui contient express
 
 app.use(express.static('public')); //permet d'utiliser les images css et js de nos pages
 app.set('view engine','ejs'); // ?
+app.use(bodyParser.urlencoded({extended:true})); //??
 
 //localhost:2466
 app.get('/',function(req,res){     // fonction qui permet de recevoir une requete "GET" et de lui envoter une reponse 
