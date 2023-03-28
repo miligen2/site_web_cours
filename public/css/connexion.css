@@ -1,0 +1,84 @@
+body{
+    background: #000;
+}
+.connexion_contenant{
+  width: 40vw;
+  border-radius: 10px;
+  height: 40vh;
+  margin: 20vh auto auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+.gauche {
+  display: flex;
+  flex-direction: column;
+  color: white;   
+  background-repeat: no-repeat;
+  background-size: 60vh 60vw;
+  background-image: url("../src/Pizza.png");
+  height: 50vh ;
+}
+.titre{
+  text-align: end;
+}
+.description{
+  
+}
+.droite{
+  display:flex;
+  flex-direction: column;
+  place-items: center;
+  width: 25vw;
+}
+
+
+
+input[id="mail"]  {
+    padding: 1vh 0.1vw;
+    background: #ffffff ;
+    margin: 1vh 0;
+    width: 12vw;
+    border: 2px solid #a7001e;
+    border-radius: 10px;
+    outline: none;
+
+  }
+  input[id="password"]  {
+    padding: 1vh 0.1vw;
+    background: #ffffff ;
+    margin: 1vh 0;
+    width: 12vw;
+    border: 2px solid #a7001e;
+    border-radius: 10px;
+    outline: none;
+
+  }
+  input[id="mail"]::placeholder{
+    color: #000
+
+  }
+  input[id="password"]::placeholder{
+    color: #000
+
+  }
+
+  button{
+    display: center;
+    justify-content: center;
+    padding: 1vh 0.1vw;
+    width: 12vw;
+    margin: 1vh 0 ;
+    background: #ffffff;
+    border: 2px solid #a7001e;
+    border-radius: 10px; 
+    cursor: pointer;
+  }
+  button:hover{
+    border: 2px solid #e4dfc0;
+    background-color: #C1AA9E ;
+
+  }
+
+
+

@@ -1,6 +1,18 @@
 {
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "mysql2": "^3.2.0"
-  }
+    "mysql2": "^3.2.0",
+    "request": "^2.88.2"
+  },
+  "name": "dev-bts",
+  "description": "Pour commencer j'ai choisis de faire une barre horizontal basic avec un onglet de connexion pour que l'utilisateur se connecte, un ongle magasin pour qu'il puisse voir ou les magasins sont situé puis un onglet carte pour qu'il télécharge la carte du magasin.\r elle sont installé entre des balises `<nav>`",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
 }
