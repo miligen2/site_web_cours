@@ -14,30 +14,32 @@ body{
   display: flex;
   flex-direction: column;
   color: white;   
+  border-radius: 25px 0 0 25px;
   background-repeat: no-repeat;
-  background-size: 60vh 60vw;
-  background-image: url("../src/Pizza.png");
+  background-size: 20vw 100vh;
+  background-image: url("../img/Pizza.png");
   height: 50vh ;
 }
 .titre{
   text-align: end;
 }
-.description{
-  
-}
+
 .droite{
-  display:flex;
-  flex-direction: column;
+  background: #111b281d;
+  border-radius: 0 25px 25px 0 ;
+  display:grid;
   place-items: center;
   width: 25vw;
+  height: 50vh;
 }
 
 
 
 input[id="mail"]  {
+  margin-top: 15vh;
+  margin-bottom: 2vh;
     padding: 1vh 0.1vw;
     background: #ffffff ;
-    margin: 1vh 0;
     width: 12vw;
     border: 2px solid #a7001e;
     border-radius: 10px;
@@ -63,7 +65,7 @@ input[id="mail"]  {
 
   }
 
-  button{
+  #btn {
     display: center;
     justify-content: center;
     padding: 1vh 0.1vw;
@@ -74,7 +76,7 @@ input[id="mail"]  {
     border-radius: 10px; 
     cursor: pointer;
   }
-  button:hover{
+  #btn:hover{
     border: 2px solid #e4dfc0;
     background-color: #C1AA9E ;
 

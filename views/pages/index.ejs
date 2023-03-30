@@ -25,13 +25,10 @@
           <li><a href="img/artoff7.jpg">Carte</a></li>
           <li><a href="/magasin">Magasin</a></li>
           <li><a href="/connexion">Se connecter</a></li>
+          <li><a href="/panier">Panier</a></li>
       </ul>
 	</header> 
-    <div class="imgimp">
         <img src="img/276908.png" alt="pizza" srcset="" id="pizzah">
-    </div>
-
-
 
     <section id="menu_liste">
         <header id="titre_menu">
@@ -41,40 +38,32 @@
         </header>
         <div class="trait"></div>
 
+
         <div class="liste_pizza">
-            <div class="pizza">
-                <div class="image_pizza">
-                    <img src="img/margheritha.png" alt="margherita"id="image_pizza">
-                </div>
-                <div class="nom_pizza">
-                    <div class="titre_pizza">
-                        <h3>El Marguerita</h3>
+                <% produits.forEach(function(item) { %>
+                <div class="pizza">
+                    <div class="image_pizza">
+                        <img src="<%= item.image %>" alt="margherita"id="image_pizza">
                     </div>
-                    <div class="description">
-                        Sauce tomate, feuilles de basilic frais, mozzarella.
-                        Sublime la recette avec supplément de délicieux anchois après cuisson.
+                    <div class="nom_pizza">
+                        <div class="titre_pizza">
+                            <h3><%= item.name %></h3>
+                        </div>
+                        <div class="description">
+                            <%= item.description %>
+                        </div>
                     </div>
-                </div>
-                <div class="prix_pizza">
-                    9€75
-                </div>
-            </div>
-            <div class="pizza">
-                <div class="image_pizza">
-                    <img src="img/pepperoni.png" alt="margherita"id="image_pizza">
-                </div>
-                <div class="nom_pizza">
-                    <div class="titre_pizza">
-                        <h3>El Pepperoni </h3>
+                    <div class="prix_pizza">
+                        <%= item.price %> €
                     </div>
-                    <div class="description">
-                        Sauce tomate, mozzarella, pepperoni. 
-                    </div>
+                    <form action="/panier" method="post">
+                        <input type="submit" value="Ajouter"id="btn">
+                    </form>
+                    
                 </div>
-                <div class="prix_pizza">
-                    11€75
-                </div>
-            </div>
+                
+                <% }) %>
+
             <div class="pizza">
                 <div class="image_pizza">
                     <img src="img/margheritha.png" alt="margherita"id="image_pizza">
@@ -176,23 +165,7 @@
                     9€75
                 </div>
             </div>
-            <div class="pizza">
-                <div class="image_pizza">
-                    <img src="img/margheritha.png" alt="margherita"id="image_pizza">
-                </div>
-                <div class="nom_pizza">
-                    <div class="titre_pizza">
-                        <h3>El Calzone</h3>
-                    </div>
-                    <div class="description">
-                        Sauce tomate, feuilles de basilic frais, mozzarella.
-                        Sublime la recette avec supplément de délicieux anchois après cuisson.
-                    </div>
-                </div>
-                <div class="prix_pizza">
-                    9€75
-                </div>
-            </div>
+
         </div>
     </div>
     <br><br><br>
