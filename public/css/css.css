@@ -57,6 +57,9 @@ height: 70vh
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.325);
     background-color: rgba(255, 255, 255, 0.11);
 }
+.pizza:hover{
+    
+}
 .image_pizza {
     display: flex;
     justify-content: center;
@@ -86,13 +89,13 @@ margin-left: 10px;
     padding: 1vh 0.1vw;
     width: 12vw;
     margin: 1vh auto ;
-    background: #ffffff;
+    background: #d4bbae;
     border: 2px solid #a7001e;
-    border-radius: 10px; 
+    border-radius: 25px; 
     cursor: pointer;
   }
   #btn:hover{
-    border: 2px solid #e4dfc0;
+    border-color:  green;
     background-color: #C1AA9E ;
 
   }

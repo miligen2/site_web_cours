@@ -32,6 +32,7 @@ app.get('/magasin',function(req,res){
 });
 app.get('/inscription',function(req,res){     
     res.render('pages/inscription') 
+
 });
 app.post('/inscription',function(req,res){ 
     const name = req.body.name ;
@@ -47,40 +48,44 @@ app.post('/inscription',function(req,res){
         }else if (psw === vpsw) {
             conn.execute('INSERT INTO clients (id,nom,email,password) VALUES (NULL,?,?,?)',[name,email,psw],(err,result)=>{
                 if (err) throw err;
-                res.write('pages/connexion');
+                res.render('pages/connexion');
             })
+            conn.unprepare('INSERT INTO clients (id,name,email,password) VALUES (NULL,?,?,?)');
+
+            
         } else {
             res.write('Mot de passe différent')
+            console.log(err);
         }
 
      })
-
+     
 
 
     
     //  conn.execute('INSERT INTO clients (id,nom,email,password) VALUES (NULL,?,?,?)',[name,email,psw],(err,result)=>{
 
-    //     // if(psw===vpsw){
-    //     //     conn.query('SELECT email FROM clients WHERE email = ?',[email],(err,result)=>{ 
-    //     //         //o nveutverrifier si il a deja un compte 
-    //     //         // si oui renvoyer à la page de connexion avec mesage 
-    //     //         // si non on veut verifier coresspondance des mdp 
-    //     //         //si mdp ok inserer dans la table 
-    //     //         //sinon dire pas bon mdp 
+    //     if(psw===vpsw){
+    //         conn.query('SELECT email FROM clients WHERE email = ?',[email],(err,result)=>{ 
+    //             //o nveutverrifier si il a deja un compte 
+    //             // si oui renvoyer à la page de connexion avec mesage 
+    //             // si non on veut verifier coresspondance des mdp 
+    //             //si mdp ok inserer dans la table 
+    //             //sinon dire pas bon mdp 
 
-    //     //         if(err)
-    //     //         {
-    //     //             throw "Vous avez déja un compte";
-    //     //         }
-    //     //     })
-    //     // }
+    //             if(err)
+    //             {
+    //                 throw "Vous avez déja un compte";
+    //             }
+    //         })
+    //     }
 
 
     //     if(err===null){
     //         res.render('pages/connexion');
     //         res.write('Votre compte a été créer ')
     //     }else{
-    //         throw err; 
+         
     //     }
 
     //  });
@@ -118,7 +123,7 @@ app.get('/panier',function(req,res){
 });
 
 app.post('/panier',function(req,res){ 
-    conn.query("INSERT INTO panier() ")
+   // conn.query("INSERT INTO panier() ")
         
     res.render('pages/panier') 
 });
