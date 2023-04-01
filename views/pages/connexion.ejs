@@ -26,13 +26,18 @@
                     <div class="titre"><h2>Se connecter à Pizza'ngelo</h2> </div>
                     <div class="description"> Se connecter pour bénéficier des avantages clients </div>
                 </div>
-                <form method="post" action="">
-                    <div class="droite"><input type="text" name="mail" id="mail"placeholder="Adresse mail">
-                    <input type="text" name="mdp" id="password"placeholder="Mot De Passe">
-                    <input id="btn"type="submit" value="connexion">
+                <form method="post" action="/connexion">
+                    <div class="droite">
+                        <label>Adresse Mail :</label>
+                        <input type="text" name="email" id="mail"placeholder="Adresse mail">
+                        <label>Mot de passe :</label>
+                    <input type="password" name="password" id="password"placeholder="Mot De Passe">
+                    <input id="btn"type="submit" value="Connexion">
+                    <a href=""><h5>Mot de passe oublié ?</h5></a>
+                    <a href="/inscription"><p style="font-size: 0.58em;">Créer un compte</p></a>
+                    </div>
                 </form>
-                <a href=""><h5>Mot de passe oublié ?</h5></a>
-                <a href="/inscription"><h6>Créer un compte</h6></a>
+             
             
              </div>
             </div>

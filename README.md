@@ -1,24 +1,19 @@
 # site_web_cours
-## HTML
-### Nav Bar 
-Pour commencer j'ai choisis de faire une barre horizontal basic avec un onglet de connexion pour que l'utilisateur se connecte, un ongle magasin pour qu'il puisse voir ou les magasins sont situé puis un onglet carte pour qu'il télécharge la carte du magasin.
-elle sont installé entre des balises `<nav>`
+Site web avec la frameword express 
+## Comment installer
 
-```HTML
- <nav>
-    Barre de navigation
- </nav>
+Premiere chose a faire et de cloner le repertoire git :
 ```
-### body
-Le body contient les pizza proposé par le magasin elles sont proposé en forme de carte. 
-
-### Footer
-Le footer contient les informations de l'entreprise, les réseaux et les compositions des pizza
-
-## CSS 
-J'ai choisis un dégradé de couleur en fond de jaune à rouge ce qui rappel la couleur de la pizza 
-``` CSS 
- background: rgb(2,0,36);
- background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(226,233,192,1) 0%, rgba(233,205,192,1) 100%);
+git clone https://github.com/miligen2/site_web_cours.git
 ```
 
+Une fois que le répertoire est cloné :
+```
+npm install
+npm run dev
+```
+
+## To fix
+Ajouter une connexion
+
+Ajotuer les articles dans un pannier

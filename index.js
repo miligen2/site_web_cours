@@ -6,6 +6,8 @@ import mysql from "mysql2";
 
 const app = express();// creation du variable qui contient express
 
+app.listen('2466');// le site sera lu sur le port 2466 
+
 const conn = mysql.createConnection({
     host:"localhost",
     port: '3306',
@@ -43,66 +45,37 @@ app.post('/inscription',function(req,res){
     conn.query('SELECT email FROM clients WHERE email = ?',[email],(err,result)=>{
         if(err) throw err; 
         if(result.length > 0){
-            res.render('pages/connexion');
-            res.write('vous avez déja un compte :)');
+            res.redirect('/connexion');
         }else if (psw === vpsw) {
             conn.execute('INSERT INTO clients (id,nom,email,password) VALUES (NULL,?,?,?)',[name,email,psw],(err,result)=>{
                 if (err) throw err;
-                res.render('pages/connexion');
+                res.redirect('/inscsucces');
+
             })
             conn.unprepare('INSERT INTO clients (id,name,email,password) VALUES (NULL,?,?,?)');
 
-            
-        } else {
-            res.write('Mot de passe différent')
-            console.log(err);
-        }
+        } 
 
      })
-     
-
-
-    
-    //  conn.execute('INSERT INTO clients (id,nom,email,password) VALUES (NULL,?,?,?)',[name,email,psw],(err,result)=>{
-
-    //     if(psw===vpsw){
-    //         conn.query('SELECT email FROM clients WHERE email = ?',[email],(err,result)=>{ 
-    //             //o nveutverrifier si il a deja un compte 
-    //             // si oui renvoyer à la page de connexion avec mesage 
-    //             // si non on veut verifier coresspondance des mdp 
-    //             //si mdp ok inserer dans la table 
-    //             //sinon dire pas bon mdp 
-
-    //             if(err)
-    //             {
-    //                 throw "Vous avez déja un compte";
-    //             }
-    //         })
-    //     }
-
-
-    //     if(err===null){
-    //         res.render('pages/connexion');
-    //         res.write('Votre compte a été créer ')
-    //     }else{
-         
-    //     }
-
-    //  });
-    // conn.unprepare('INSERT INTO clients (id,name,email,password) VALUES (NULL,?,?,?)');
-
-        
-
-   
+});
+app.get('/inscsucces',function(req,res){     
+    res.render('pages/inscsucces') 
 });
 
 app.get('/connexion',function(req,res){     
     res.render('pages/connexion') 
 });
-app.post('/connexion',function(req,res){
-    let client = checkLogin(req.body.login, req.body.mdp)
 
-    res.render('pages/connexion') 
+app.post('/connexion',function(req,res){
+    const email = req.body.email;
+    const psw = req.body.password;
+    conn.query('SELECT email, password FROM clients WHERE email = ? AND password = ?',[email,psw],(err,result)=>{
+        if(err)throw err;
+        if(result.length > 0){
+        res.redirect('/');
+    }
+   });
+
 });
 
 app.get('/qui_sommes_nous',function(req,res){     
@@ -129,8 +102,3 @@ app.post('/panier',function(req,res){
 });
 
 
-
-
-
-
-app.listen('2466');// le site sera lu sur le port 2466 

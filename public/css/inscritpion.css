@@ -1,6 +1,6 @@
 
 #container {
-    background: #635952;
+  background: #111b281d;
     width: 18.75rem;
     height: 25rem;
     margin: auto;
@@ -18,9 +18,9 @@
     vertical-align: middle;
     line-height: 3rem;
     height: 3rem;
-    background: #7C7844;
+    background: #a7001f6f;
     font-size: 1.4rem;
-    color: #d3d3d3;
+    color: black;
 }
 
 fieldset {
@@ -29,21 +29,27 @@ fieldset {
 }
 
 input[type="submit"] {
-    background: #7C7844;
+    background: #C1AA9E;
     border: 0;
     display: block;
     width: 70%;
     margin: 0 auto;
-    color: white;
+    color: black;
     padding: 0.7rem;
-    cursor: pointer;
+    border-radius: 25px;
+    border: #d4bbae solid 1px;
+}
+input[type="submit"]:hover{
+    border: 2px solid #e4dfc0;
+    background-color: #C1AA9E ;
+
 }
 
 input {
     background: transparent;
     border: 0;
     border-left: 4px solid;
-    border-color: #bcb76c;
+    border-color: #3b29037c;
     padding: 10px;
     color: white;
 }
@@ -58,7 +64,7 @@ input[type="password"]:focus {
 }
 
 ::placeholder {
-    color: #d3d3d3;
+    color: #0000007c;
 }
 
 /*Media queries */

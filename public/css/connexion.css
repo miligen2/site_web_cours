@@ -1,6 +1,9 @@
-body{
-    background: #000;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+a:hover{
+  color:#A7001E;
 }
+
 .connexion_contenant{
   width: 40vw;
   border-radius: 10px;
@@ -27,16 +30,21 @@ body{
 .droite{
   background: #111b281d;
   border-radius: 0 25px 25px 0 ;
-  display:grid;
-  place-items: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 25vw;
   height: 50vh;
+}
+label{
+  margin-right: 70px;
 }
 
 
 
 input[id="mail"]  {
-  margin-top: 15vh;
+
   margin-bottom: 2vh;
     padding: 1vh 0.1vw;
     background: #ffffff ;
@@ -71,7 +79,7 @@ input[id="mail"]  {
     padding: 1vh 0.1vw;
     width: 12vw;
     margin: 1vh 0 ;
-    background: #ffffff;
+    background: #d4bbae;
     border: 2px solid #a7001e;
     border-radius: 10px; 
     cursor: pointer;
