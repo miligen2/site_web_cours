@@ -7,18 +7,17 @@ h3 ,h4{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
-    background:white;
-    
+    height: 50vh;    
 }
 
 .coupon{
     width: 450px;
     padding: 15px;
     border-radius: 25px;
-    background: white;
     box-shadow: 0px 0.9px 10px 0 rgba(0, 0, 0, 15%);
     margin: 0 0 8px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(226,233,192,1) 0%, rgba(233,205,192,1) 100%);
 }
 .coupon_input
 {
@@ -39,10 +38,18 @@ width: 100%;
     border-radius: 10px;
     font-size:16px ;
     padding: 4px 30px;
+    background: rgba(14, 133, 14, 0.194);;
+}
+#valider:hover{
+    animation: color 1s ;
+    background: rgba(4, 109, 4, 0.487);
+    color: aliceblue;
 }
 
+
 .details{
-    background: green;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(226,233,192,1) 0%, rgba(233,205,192,1) 100%);
     padding: 15px;
     border-radius: 25px;
     box-shadow: 0px 0.9px 10px 0 rgba(0, 0, 0, 15%);
@@ -76,5 +83,9 @@ width: 100%;
     cursor: pointer;
     background: none;
     border:none;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
 }
 
