@@ -58,7 +58,11 @@
                         <%= item.price %> €
                     </div>
                     <form action="/panier" method="post">
-                        <input type="hidden" name="produit_id" value="<%= item.id %>">
+                        <input type="hidden" name="id" value="<%= item.id %>">
+                        <input type="hidden" name="name" value="<%= item.name %>">
+                        <input type="hidden" name="price" value="<%= item.price %>">
+                        <input type="hidden" name="quatity" value="1">
+                        <input type="hidden" name="image" value="<%= item.image %>">
                         <input type="submit" value="Ajouter"id="btn">
                     </form>
                     

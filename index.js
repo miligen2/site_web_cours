@@ -91,14 +91,26 @@ app.get('/emploi',function(req,res){
     res.render('pages/footer/emploi') 
 });
 
-app.get('/panier',function(req,res){     
-    res.render('pages/panier') 
+app.get('/panier',function(req,res){    
+    conn.query("SELECT * FROM panier",(err,result)=>{
+    console.log(result);
+    res.render('pages/panier', {panier:result});
 });
+})
 
 app.post('/panier',function(req,res){ 
-   // conn.query("INSERT INTO panier() ")
-        
-    res.render('pages/panier') 
+   const id=req.body.id;
+   const name=req.body.name;
+   const price=req.body.price;
+   const quantity=req.body.quantity;
+   const image=req.body.image;
+
+   conn.query('INSERT INTO panier ( name, price, quantity) VALUES ( ?, ?, 1)', [ name, price, quantity], function(error, results, fields) {
+    if (error) throw error;
+    console.log('produit ajouté au panier : ', results);
+    res.redirect('/panier');
+
+});
 });
 
 
