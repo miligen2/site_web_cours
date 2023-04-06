@@ -58,49 +58,13 @@
                         <%= item.price %> €
                     </div>
                     <form action="/panier" method="post">
+                        <input type="hidden" name="produit_id" value="<%= item.id %>">
                         <input type="submit" value="Ajouter"id="btn">
                     </form>
                     
                 </div>
                 
                 <% }) %>
-
-           
-            <div class="pizza">
-                <div class="image_pizza">
-                    <img src="img/margheritha.png" alt="margherita"id="image_pizza">
-                </div>
-                <div class="nom_pizza">
-                    <div class="titre_pizza">
-                        <h3>El Calzone</h3>
-                    </div>
-                    <div class="description">
-                        Sauce tomate, feuilles de basilic frais, mozzarella.
-                        Sublime la recette avec supplément de délicieux anchois après cuisson.
-                    </div>
-                </div>
-                <div class="prix_pizza">
-                    9€75
-                </div>
-            </div>
-            <div class="pizza">
-                <div class="image_pizza">
-                    <img src="img/margheritha.png" alt="margherita"id="image_pizza">
-                </div>
-                <div class="nom_pizza">
-                    <div class="titre_pizza">
-                        <h3>El Calzone</h3>
-                    </div>
-                    <div class="description">
-                        Sauce tomate, feuilles de basilic frais, mozzarella.
-                        Sublime la recette avec supplément de délicieux anchois après cuisson.
-                    </div>
-                </div>
-                <div class="prix_pizza">
-                    9€75
-                </div>
-            </div>
-
         </div>
     </div>
     <br><br><br>
