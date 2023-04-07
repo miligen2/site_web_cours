@@ -4,13 +4,24 @@
 }
 .container{
     display: grid;
-    place-items: center;
+    place-items:center;
 }
+
+#compteur,.a,.description {
+    display: inline;
+}
+#i{
+    text-align: center;
+}
+
 
 .titre{
     font-size: 3em;
     font-weight: 700;
 }
-a:hover{
+a{
     color: #A7001E;
+}
+a:hover{
+    color: #c73b55;
 }

@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="refresh" content="5;URL=/connexion">
+    <meta http-equiv="refresh" content="4;URL=/connexion">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/succesins.css">
     <link rel="shortcut icon" href="img/logo2.ico" />
     <title>Inscription réussite</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container">        
         <p class="titre">Inscription Réussite !</p>
-        <p class="description">Vous allez être redirigé automatiquement dans 5 sur la page de connexion </p>
-            <p><a href="/connexion">Cliquez ici</a> pour être redirigé</p>
+        <div class="container2">
 
+        <p class="description">Vous allez être redirigé automatiquement dans </p><div id="compteur"> 5 </div> <p class="a"> sec sur la page de connexion </p>
+            <p style="display: flex; justify-content: center;"><a href="/connexion" id="c" style="margin-right: 5px;">Cliquez ici </a> pour être redirigé</p>
 
+            <script>
+                // Fonction qui effectue le décompte et la redirection
+                function countdown() {
+                    let compteur = 5; // Définition de la variable compteur avec une valeur initiale de 5 secondes
+                    let intervalId = setInterval(() => {
+                        compteur--; // Décrémentation du compteur
+                        document.getElementById("compteur").textContent = compteur; // Affichage du compteur dans la page
+                    }, 1000);
+                }
+        
+                countdown(); // Appel de la fonction countdown au chargement de la page
+            </script>
+</div>
     </div>
 </body>
 </html>

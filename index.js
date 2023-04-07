@@ -46,10 +46,12 @@ app.post('/inscription',function(req,res){
         if(err) throw err; 
         if(result.length > 0){
             res.redirect('/connexion');
+            console.log("Vous avez deja un compte");
         }else if (psw === vpsw) {
             conn.execute('INSERT INTO clients (id,nom,email,password) VALUES (NULL,?,?,?)',[name,email,psw],(err,result)=>{
                 if (err) throw err;
                 res.redirect('/inscsucces');
+                console.log("inscription reussite");
 
             })
             conn.unprepare('INSERT INTO clients (id,name,email,password) VALUES (NULL,?,?,?)');
@@ -61,7 +63,7 @@ app.post('/inscription',function(req,res){
 app.get('/inscsucces',function(req,res){     
     res.render('pages/inscsucces') 
 });
-
+//connexion
 app.get('/connexion',function(req,res){     
     res.render('pages/connexion') 
 });
@@ -77,7 +79,7 @@ app.post('/connexion',function(req,res){
    });
 
 });
-
+//footer
 app.get('/qui_sommes_nous',function(req,res){     
     res.render('pages/footer/qui_sommes_nous') 
 });
@@ -90,7 +92,7 @@ app.get('/news',function(req,res){
 app.get('/emploi',function(req,res){     
     res.render('pages/footer/emploi') 
 });
-
+// panier
 app.get('/panier',function(req,res){    
     conn.query("SELECT * FROM panier",(err,result)=>{
     console.log(result);
@@ -105,7 +107,7 @@ app.post('/panier',function(req,res){
    const quantity=req.body.quantity;
    const image=req.body.image;
 
-   conn.query('INSERT INTO panier ( name, price, quantity) VALUES ( ?, ?, 1)', [ name, price, quantity], function(error, results, fields) {
+   conn.query('INSERT INTO panier (name, price, quantity) VALUES (?, ?, 1)', [name, price, quantity], function(error, results, fields) {
     if (error) throw error;
     console.log('produit ajouté au panier : ', results);
     res.redirect('/panier');

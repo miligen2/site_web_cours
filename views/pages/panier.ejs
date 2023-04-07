@@ -32,6 +32,8 @@
             </section>
 
 
+            <%let totalpanier = 0;%>
+
             <section class="details">   
                 <div class="titre"><h3>Détails de ma commande</h3></div>
                 <div class="trait"></div>
@@ -54,14 +56,13 @@
                     <div class="prix"><h4><%= item.quantity * item.price %> €</h4></div>
                 </div>
                 <div class="modifie">
-                    <button class="delete"><h4>Supprimer</h4></button>
+                    <input type="hidden" name="id" value="<%=item.id%>"/>
+                    <button class="delete"><h4>Supprimer</h4></button> <!-- mettre en input-->
                 </div>
                  <div class="trait"></div> 
                 <% }) %>
                 <% } else { %>
 
-                <div class="titre"><h3>Détails de ma commande</h3></div>
-                <div class="trait"></div>
                 <div class="test">
                     <div class="row">
                         <h4>Votre panier est vide</h4>
@@ -69,8 +70,11 @@
                 <% } %>
 
 
-   
-                <div class="total"><h3>Total : 14.98</h3></div>
+                <% if (!panier.length > 0) { %>
+                <div class="total"><h3>Total : -- €</h3></div>
+                <% } else { %>
+                <div class="total"><h3>Total : <%totalpanier += item.price;%>  €</h3></div>
+                <% } %>
             </section> 
         </div>
     </div>
