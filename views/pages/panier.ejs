@@ -32,13 +32,14 @@
             </section>
 
 
-            <%let totalpanier = 0;%>
-
+            
             <section class="details">   
                 <div class="titre"><h3>Détails de ma commande</h3></div>
                 <div class="trait"></div>
                 <% if (panier.length > 0) { %>
+                    <% var totalpanier = 0; %>
                     <% panier.forEach(function(item) { %>
+
                 <div class="test">
 
                     <div class="row">
@@ -53,29 +54,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="prix"><h4><%= item.quantity * item.price %> €</h4></div>
+                    <div class="prix"><h4><%= item.price %> €</h4></div>
                 </div>
                 <div class="modifie">
-                    <input type="hidden" name="id" value="<%=item.id%>"/>
-                    <button class="delete"><h4>Supprimer</h4></button> <!-- mettre en input-->
+                    <form action="/del" method="post">
+                        <input type="hidden" name="id" value="<%=item.id%>"/>
+                        <input type="button" class="delete" value="Supprimer">
+                    </form>
                 </div>
-                 <div class="trait"></div> 
+                    
+                 <div class="trait"></div>
+                 <% totalpanier += item.price * item.quantity; %>
                 <% }) %>
+                <div class="total"><h3>Total : <%= totalpanier.toFixed(2) %>   €</h3></div> 
                 <% } else { %>
 
                 <div class="test">
                     <div class="row">
                         <h4>Votre panier est vide</h4>
                     </div>
+                    <div class="total"><h3>Total : -- €</h3></div>                    
                 <% } %>
-
-
-                <% if (!panier.length > 0) { %>
-                <div class="total"><h3>Total : -- €</h3></div>
-                <% } else { %>
-                <div class="total"><h3>Total : <%totalpanier += item.price;%>  €</h3></div>
-                <% } %>
+                
+                
+                
             </section> 
+
+            <section class="payer">
+                <input type="button" value="Payer">
+
+            </section>
         </div>
     </div>
 

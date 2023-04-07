@@ -115,4 +115,15 @@ app.post('/panier',function(req,res){
 });
 });
 
+app.post('/del', function(req, res){
+    const panierId = req.body.id;
+
+    conn.query(`DELETE FROM panier WHERE item.id = '${panierId}';`, function(error, result) {
+      if (error) throw error;
+      console.log(`Commande supprimée avec succès: ${panierId}`);
+      res.redirect('/panier');
+    
+    });
+  });
+
 
