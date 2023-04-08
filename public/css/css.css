@@ -62,7 +62,7 @@ filter: blur(4px);}
     background-color: rgba(255, 255, 255, 0.11);
 }
 .pizza:hover{
-    animation: bounce 2s;
+    animation: bounce ease;
     transform: translateY(-10px);
 }
 @keyframes bounce {
