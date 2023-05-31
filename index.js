@@ -125,5 +125,4 @@ app.post('/del', function(req, res){
     
     });
   });
-
-
+  module.exports = app;
